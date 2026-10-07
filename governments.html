@@ -50,18 +50,6 @@ p{margin:0 0 1rem;max-width:68ch}
 .motif{background:var(--navy);padding:clamp(1.5rem,4vw,2.5rem);display:grid;gap:14px}
 .motif span{display:block;height:14px}
 .motif .l{background:#6A819A}.motif .h{background:var(--teal-light);height:22px}.motif .d{background:var(--surface)}
-.doors{display:grid;gap:1rem}
-.doors-l{font-size:.8125rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0}
-.door{display:grid;grid-template-columns:auto 1fr;gap:0 1rem;align-items:start;background:var(--raised);border:1px solid var(--hairline);border-left:6px solid var(--navy);border-radius:8px;padding:1.25rem 1.25rem 1.25rem 1.1rem;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
-.door.v{border-left-color:var(--teal)}
-.door:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(14,42,71,.12);color:var(--ink)}
-.door svg{grid-row:1/4;margin-top:.15rem}
-.door strong{font-family:var(--serif);font-size:1.3rem;line-height:1.2;color:var(--navy)}
-.door span.d{color:var(--muted);font-size:1rem;line-height:1.5;margin-top:.35rem}
-.door span.go{font-weight:700;color:var(--teal);margin-top:.6rem}
-.door.g span.go{color:var(--navy)}
-.door:hover span.go{text-decoration:underline;text-underline-offset:3px}
-@media(prefers-reduced-motion:reduce){.door{transition:none}.door:hover{transform:none}}
 .deadline{background:var(--navy);color:var(--surface)}
 .deadline .wrap{padding-block:1.5rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 2.5rem}
 .deadline strong{display:block;font-family:var(--serif);font-size:1.5rem;color:#fff}
@@ -208,17 +196,17 @@ details[open] p{animation:fadein .3s ease both}
 <section class="hero">
 <div class="wrap grid">
 <div>
-<p class="eyebrow rise" style="animation-delay:.9s">For governments, schools and the software they buy</p>
+<p class="eyebrow rise" style="animation-delay:.9s">Digital accessibility compliance for government</p>
 <h1 class="rise" style="animation-delay:1s">Every resident, every page.</h1>
 <p class="lead rise" style="animation-delay:1.15s">We help Georgia cities, counties and school districts make their websites and documents usable by everyone, and get ready for the federal ADA Title II web rule. Plain-language findings. Fixed prices. No overlays.</p>
 <div class="actions rise" style="animation-delay:1.3s">
 <a class="btn" href="mailto:marcos@loluaccessibility.com?subject=Free%20accessibility%20snapshot%20request">Request a free accessibility snapshot</a>
+<a class="btn secondary" href="#services">See services and pricing</a>
 </div>
 </div>
-<div class="doors">
-<p class="doors-l rise" style="animation-delay:1s" id="doors-h">Choose your path</p>
-<a class="door g rise" style="animation-delay:1.15s" href="#services" aria-describedby="doors-h"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#0E2A47" stroke-width="2.5" stroke-linecap="square"><path d="M4 34h32M8 34V16l12-8 12 8v18"/><path d="M15 34V22h10v12" stroke="#0F766E"/></svg><strong>I run a city, county or school district</strong><span class="d">Get your website and documents ready for the ADA Title II rule. Free snapshot, fixed prices.</span><span class="go">Government services &rarr;</span></a>
-<a class="door v rise" style="animation-delay:1.3s" href="index.html"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#0E2A47" stroke-width="2.5" stroke-linecap="square"><rect x="4" y="7" width="32" height="26"/><path d="M4 14h32"/><path d="M10 22h12M10 27h8" stroke="#0F766E"/></svg><strong>I sell software to government or schools</strong><span class="d">A fixed-price Accessibility Conformance Report (VPAT 2.5) for your buyers. From $1,250, in 5 business days.</span><span class="go">ACR Express for vendors &rarr;</span></a>
+<div class="motif" aria-hidden="true">
+<span class="l" style="width:55%"></span><span class="h" style="width:100%"></span><span class="d" style="width:75%"></span>
+<span class="l" style="width:40%"></span><span class="d" style="width:85%"></span><span class="d" style="width:60%"></span>
 </div>
 </div>
 </section>

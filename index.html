@@ -416,6 +416,21 @@ footer{padding-block:40px 56px;color:var(--muted);font-size:15px;line-height:24p
 footer .in{display:grid;gap:20px}
 @media(min-width:800px){footer .in{grid-template-columns:auto 1fr;gap:48px}}
 footer p{margin:0 0 8px}
+.pick{background:var(--surface);border-bottom:1px solid var(--hair);padding-block:28px 32px}
+.pick .lbl{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);line-height:20px}
+.pick .picks{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:760px){.pick .picks{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+.door{display:grid;grid-template-columns:auto 1fr;gap:0 16px;align-items:start;background:var(--raised);border:1px solid var(--hair);border-left:6px solid var(--navy);border-radius:8px;padding:20px 20px 20px 18px;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease}
+.door.v{border-left-color:var(--teal)}
+.door:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(14,42,71,.12)}
+.door svg{grid-row:1/4;margin-top:2px;color:var(--navy)}
+.door{min-width:0}.door strong{font-family:var(--serif);font-size:21px;line-height:27px;color:var(--navy)}
+.door .d{color:var(--muted);font-size:16px;line-height:24px;margin-top:6px}
+.door .go{font-weight:700;color:var(--teal);margin-top:10px}
+.door.g .go{color:var(--navy)}
+.door:hover .go{text-decoration:underline;text-underline-offset:3px}
+.door .here{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);border:1.5px solid var(--teal);border-radius:4px;padding:0 6px;line-height:18px;vertical-align:3px}
+@media (prefers-reduced-motion:reduce){.door{transition:none}.door:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -463,6 +478,13 @@ footer p{margin:0 0 8px}
   </div>
 </div></section>
 
+<section class="pick" aria-labelledby="pickH"><div class="in">
+<p class="lbl" id="pickH">Choose your path</p>
+<div class="picks">
+<a class="door v" href="#start"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><rect x="4" y="7" width="32" height="26"/><path d="M4 14h32"/><path d="M10 22h12M10 27h8" style="stroke:var(--teal)"/></svg><strong>I sell software to government or schools<span class="here">You're here</span></strong><span class="d">A fixed-price Accessibility Conformance Report (VPAT 2.5) for your buyers. From $1,250, in 5 business days.</span><span class="go">Start your ACR &rarr;</span></a>
+<a class="door g" href="governments.html"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M4 34h32M8 34V16l12-8 12 8v18"/><path d="M15 34V22h10v12" style="stroke:var(--teal)"/></svg><strong>I run a city, county or school district</strong><span class="d">Get your website and documents ready for the ADA Title II rule. Free snapshot, fixed prices.</span><span class="go">Government services &rarr;</span></a>
+</div>
+</div></section>
 <section class="rule" id="the-rule" aria-labelledby="ruleH"><div class="in">
   <div class="rule-top">
     <div class="rule-copy">
@@ -937,7 +959,7 @@ footer p{margin:0 0 8px}
 
   /* fade-and-rise reveals, staggered within a group */
   var groups=[
-    '.rule-copy>*','.date','.date-gap','.chain-h','.chain .cs','.states li','.rule .caption',
+    '.pick .door','.rule-copy>*','.date','.date-gap','.chain-h','.chain .cs','.states li','.rule .caption',
     '#what-is-acr .head','.panels .pn','#what-is-acr .caption','#journey .head','.stages .stage','.legendbox','.checks li','#deliver .head','#delivery .head','.gantt',
     '#pricing .head','.plans .plan','#who .head','.bio','.wont','#glossary .head','.glh','.gl','#glossary .caption','#faq .head','details','#start .head','.formwrap>*'
   ];
